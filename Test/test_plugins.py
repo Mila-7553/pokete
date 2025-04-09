@@ -1,5 +1,7 @@
 import importlib.metadata
 import sys
+import os
+
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from pokete_classes.mods import ModError
 import variables as var
@@ -30,5 +32,5 @@ def test_other_plugins():
     my_mods = {
     "pokete_mods": []}
     mod_obs = try_plugin(my_mods)
-    assert mpds_obs == []
+    assert mod_obs == []
     assert len(mod_obs) == 0
