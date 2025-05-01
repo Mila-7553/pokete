@@ -9,7 +9,7 @@ def test_ruff_formats_intent_correctly(tmp_path):
 
     # Running Ruff as it would be done in the terminal:
     result_intent = subprocess.run(
-        ["py", "-m","ruff", "format", str(test_file_intent), "--config=ruff.toml"],
+        ["python", "-m","ruff", "format", str(test_file_intent), "--config=ruff.toml"],
         capture_output=True,
         text=True
     )
